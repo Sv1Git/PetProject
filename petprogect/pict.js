@@ -14,7 +14,7 @@ window.picter="url('./image_pet/3.jpg')"
 }
 if(this.i==2) {
 document.querySelector(".season").style.backgroundImage="url('./image_pet/осень2.png')";
-window.picter="url('./image_pet/snou.png')"
+window.picter="url('./image_pet/осень2.png')"
 }
 if(this.i==1) {
 document.querySelector(".season").style.backgroundImage="url('./image_pet/ded.png')";

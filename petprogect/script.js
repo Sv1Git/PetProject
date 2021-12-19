@@ -1,50 +1,115 @@
-<!DOCTYPE html>
-<html lang="ru">
+//data
+let date = new Date();
+let arr=['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря',];
+let ar=Number(date.getMonth());console.log(ar);
+console.log(arr[ar]);
+function displayTime() {
+    let date = new Date();
+    let time =date.getHours()+": "+ date.getMinutes()+": "+ date.getSeconds()+ " " + 
+    date.getDate()+" "+arr[ar];
+    document.querySelector('.tim').innerHTML = time;
+ }
+  const createClock = setInterval(displayTime, 1000);
+ window.onload=function()
+ {	let secund=document.querySelector('.strelka');
+     setInterval(fsec,1000);
+     let now = new Date();
+     var sec=(now.getSeconds()*Math.PI) / 180;
+     function fsec()
+     {	  
+         secund.style.transform='rotate('+sec+'deg)';
+         sec+=6;
+     }
+ }
+//timer
+let a;let b=1;n=1;
+let tim=document.querySelector('.p2');
+let tim1=document.querySelector('.p2_1');
+let tim2=document.querySelector('.p2_2');
+let prog=document.querySelector("#prog");
+let h1=+0;
+let m1=+0;
+let s1=+0;
+tim.innerHTML=0;
+tim1.innerHTML=0;
+tim2.innerHTML=0;
 
-<head>
-    <link rel="stylesheet" href="style.css" />
-</head>
+function timer(h1,m1,s1)
+{ 
+a=0; let hor=0;
+    tim.innerHTML=s1;
+    tim1.innerHTML=m1;
+    tim2.innerHTML=h1;
+    var start=s1;
+    tim.innerHTML=s1;
+      window.ti = setInterval(function(){
+    tim.innerHTML++;
+    prog.value=start;
+    start++;
+    hor++;
+    if(prog.value===60)
+    {
+    start=0;
+    tim.innerHTML=0;
+    tim1.innerHTML=Number(tim1.innerHTML)+parseInt(b); 
+    }
+    if(tim1.innerHTML==60)
+    {   tim2.innerHTML=Number(tim2.innerHTML)+parseInt(n);
+        hor=0;
+        tim1.innerHTML=0;
+    }   
+  }, 1000);	
+};
 
-<body>
-    <div class="conteiner">
-      
-        <div class="two_column">  
-            <div class="tema"><h2>TEMA</h2>
-                <select name="select" class="son"> 
-                    <option value="1" selected>Winter</option>
-                    <option value="2" >Autumn</option>
-                    <option value="3">Spring</option>
-                    <option value="4">Summer</option>
-                    <option value="5">Day</option>
-                     <option value="6">Night</option>
-                  </select> 
-                </div>
-            <div class="season"></div>
-            <div><h1>Timer</h1></div>
-            <div class="timer">
-             
-                <p class="p2_2">HOURE</p>
-                <p>:</p>
-                <p class="p2_1">Minute</p>
-                <p>:</p>
-                <p class="p2">Second</p>
-              </div>  
-                    <div class="two_row">
-                        <div class="wrap">
-                    <button class="c-btn1"  name="but">
-                    <span class="sp1">Start</span>
-                    <span class="sp2">Pause</span>
-                </button></div>
-                <button class="c-btn1 perv"  name="but">Сброс</button>
-                <div class="clock2">
-                    <img class="strelka" src="./image_pet/strelka.png" alt="1" />
-                </div>
-                </div>
-            <p class="tim"></p>
-<progress id="prog" value="0" max="60"></progress>
-        </div>
-    </div>
-</body>
-<script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="pict.js"></script>
-</html>
+const button_start = document.querySelector(".c-btn1");
+
+document.addEventListener("click", show);
+function show(event) {
+    if (event.target.closest(".c-btn1 .sp1")) {
+        button_start.classList.remove('_active');
+        button_start.classList.toggle('_active');
+        let hi=tim2.innerHTML;
+        let mi=tim1.innerHTML;
+        let si=tim.innerHTML;
+        timer(hi,mi,si);
+
+        for (var i = 0; i < u.length; i++) {
+            u[i].addEventListener("click", anime);
+        }
+    }
+    if (event.target.closest(".c-btn1 .sp2")) {
+        button_start.classList.toggle('_active');
+        button_start.classList.remove('_active');
+        clearInterval(window.ti);
+    }
+    if (event.target.closest(".perv")) {
+        button_start.classList.toggle('_active');
+        button_start.classList.remove('_active');
+        clearInterval(window.ti);
+        tim.innerHTML=0;
+        tim1.innerHTML=0;
+        tim2.innerHTML=0;
+        prog.value=0;
+
+        if (event.target.closest(".c-btn1 .sp1")) {
+            button_start.classList.remove('_active');
+            button_start.classList.toggle('_active');
+            }
+        if (event.target.closest(".c-btn1 .sp2")) {
+            button_start.classList.toggle('_active');
+            button_start.classList.remove('_active');
+        }
+    }
+}
+   
+//time
+var d = document.querySelector(".timer");
+var t = new Date();
+var h = t.getHours();
+var m = t.getMinutes();
+var s = t.getSeconds();
+var res = ""
+
+var odlData = localStorage.getItem('p');
+document.querySelector(".season").style.backgroundImage = odlData;
+//document.querySelector(".season").style.backgroundImage="url('./image/ded.png')";
