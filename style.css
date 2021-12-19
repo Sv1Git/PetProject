@@ -72,8 +72,6 @@ box-shadow: 15px 14px 8px 1px rgba(34, 60, 80, 0.25);
             height: 100%; 
         }
     }
-    
-   
     .list{
         position: absolute;
         visibility: hidden;
