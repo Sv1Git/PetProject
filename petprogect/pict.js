@@ -27,17 +27,6 @@ if(this.i==4) {
     document.querySelector(".season").style.backgroundImage="url('./image_pet/sun.png')";
     window.picter="url('./image_pet/sun.png')"
 }
-if(this.i==5) {
-    document.body.style.backgroundColor="white";
-   // window.picter="white";
-
-}
-if(this.i==6) {
-    document.body.style.backgroundColor="black";
-    //window.picter="black";
-
-}
-
 var data;
 localStorage.setItem('p',window.picter) ;
     }
