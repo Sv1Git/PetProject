@@ -1,11 +1,14 @@
+
 class Pict
 {
      constructor(i)
     {
        this.i=i;
-       console.log(i);
+        console.log(i);
        window.picter;
-    }
+      
+     }
+
     asi()
     {
 if(this.i==3) {
@@ -26,14 +29,17 @@ if(this.i==4) {
 }
 if(this.i==5) {
     document.body.style.backgroundColor="white";
+   // window.picter="white";
+
 }
 if(this.i==6) {
     document.body.style.backgroundColor="black";
+    //window.picter="black";
+
 }
 
 var data;
 localStorage.setItem('p',window.picter) ;
-
     }
 }
 
