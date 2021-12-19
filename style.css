@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.conteiner {
+display: flex;
+flex-direction:column;
+background-color: rgb(226, 215, 211);
+max-width: 60%;  
+display: flex;
+align-items: center;
+align-content: center; 
+justify-content: center; 
+overflow: auto;
+background-image: url(image/foto.jpg);
+}
+.picter{
+    max-width: 100%;
+    height: 600px;
+}
+.inform
+{   max-width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    background-color: rgb(245, 240, 235);
+    flex-wrap:wrap-reverse;
+    justify-content:space-evenly;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.but:hover{
+    background: #ffffcc;
+    transform: translate(-3%, -3%); 
+}
+.block{
+    position: fixed;
+    left:10px;
+    right:0;
+    top:500px;
+    background:rgba(255,255,255, 0.7);
+    padding:5px;
+    display:none;
+    width: 200px;
+    height: 270px;
+    border-radius: 5px;
+    bottom: 20px;
+}
+img {
+  max-width: 100%; 
+  height:0 auto;
+    }
+    .button_but{
+        border-radius:15px;
+        background-color: rgb(195, 227, 240);
+        padding: 30px 30px 30px 30px;
+margin: 5px  5px 5px 5px;
+-webkit-box-shadow: 15px 14px 8px 1px rgba(34, 60, 80, 0.25);
+-moz-box-shadow: 15px 14px 8px 1px rgba(34, 60, 80, 0.25);
+box-shadow: 15px 14px 8px 1px rgba(34, 60, 80, 0.25);
+    }
+@media (min-width:800px) 
+    {
+        .container {
+           padding: 15px;
+           display: flex;
+            -webkit-flex-wrap: wrap;
+            -webkit-flex-flow:row wrap-reverse;
+              width: 100%;
+            height: 100%; 
+        }
+    }
+   
+    .list{
+        position: absolute;
+        visibility: hidden;
+        transition: 0.1s;
+        padding: 0;
+        margin: 0;
+        bottom: 25%;
+        list-style: none;
+    }
+.hoddy{
+    position:relative;
+}
+
+.hobby:hover .list{
+    visibility: visible;
+}
+
+.hobby:hover .link {
+    transform: scaleY(1) scaleX(1) translateY(-16px) translateX(0px);
+  }
+  .hobby:hover + .hobby .link:before {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: right center 0;
+    transition-delay: 0.3s;
+  }
+  .link {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    background-color: #a1e9a4;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    transform: scaleY(0.5) scaleX(0.5) translateY(0px) translateX(0px);
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+  }
+  
+  [data-tooltip]:before {
+    top: 50%;
+    margin-top: -11px;
+    font-weight: 600;
+    border-radius: 2px;
+    background: #e4a42f;
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 18px;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    padding: 4px 7px;
+    margin-right: 12px;
+    position: absolute;
+    transform: scale(0);
+    right: 100%;
+    white-space: nowrap;
+    transform-origin: top right;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+  }
+  
+  [data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: right center 0;
+  }
+  .icon{
+      display: inline-block;
+      width: 55px;
+      height: 35px;
+  }
+  .icon1{
+    
+        background: url("image/i5.png") center no-repeat;
+        background-size: cover;
+      }
+      .icon2{
+        background: url("image/i2.png") center no-repeat;
+        background-size: contain;
+      }
+      .icon3{
+        background: url("image/i4.png") center no-repeat;
+        background-size: contain;
+      }
+
+      .item {
+        display: block;
+        text-align: center;
+        margin: 12px 0;
+      }
+
+      .icon2{
+        background: url("image/i6.png") center no-repeat;
+        background-size: contain;
+      }
+      .icon4{
+        background: url("image/i0.png") center no-repeat;
+        background-size: contain;
+      }
+      .icon5{
+        background: url("image/i5.png") center no-repeat;
+        background-size: contain;
+      }
+      h1{
+        font-size: 50px;
+        font-weight: normal;
+        text-shadow: 0px 3px 0px #b2a98f,
+        0px 14px 10px rgba(0,0,0,0.15),
+        0px 24px 2px rgba(0,0,0,0.1),
+        0px 34px 30px rgba(0,0,0,0.1);
+      color: steelblue;
+      transition: all 1s;
+      text-decoration-color: coral;
+    }
+     h1:hover {  
+        color: transparent;
+        transition: all .5s;
+      }

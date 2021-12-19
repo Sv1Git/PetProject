@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+}
+.season{
+    border-radius: 100%;
+    background-color: rgb(40, 153, 245);
+    width: 150px;
+    height: 150px;
+    margin-left: -120%;
+    margin-top: -35%;
+    position: relative;
+    background-image: url(image_pet/ded.png);
+    background-size: cover;  
+}
+.season:hover
+{
+    background-image: url(./image_pet/ded.jpg);
+    background-size: cover;  
+}
+
+.clock2{
+    border-radius: 100%;
+    background-color: rgb(40, 153, 245);
+    width: 150px;
+    height: 150px;
+    margin: 0 0 0 20px;
+    background-image: url(./image_pet/cloc.png);
+    background-size:contain; 
+
+}
+.conteiner{
+ 
+     padding: 5px;
+     display: flex;
+     align-items:center;
+     flex-direction:column;
+     max-width: 100%;
+     margin: 100px;
+}
+.two_column{
+    background-color: rgb(247, 243, 235);  padding: 50px;
+    align-items:center;
+    flex-direction:column;
+    display: flex;
+    border-radius: 20px;
+ 
+}
+.two_COLUMN2{
+    background-color: rgb(0, 255, 149);  padding: 50px;
+    align-items:center;
+    flex-direction:column;
+    display: flex;
+}
+.two_row{
+    background-color: rgb(240, 239, 155);  padding: 50px;
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    padding: 45px;
+    background-image: url(./image_pet/fon3.jpg);
+    background-size: contain;
+    border-radius: 10px;
+
+}
+button:hover {
+    background-color: rgb(62, 119, 184);
+}
+
+.sp1:hover {
+    background-color: rgb(62, 119, 184);
+}
+.sp2:hover {
+    background-color: rgb(71, 124, 185);
+}
+
+img { 
+    max-width: 100%; 
+    height:0 auto;
+    display: block;
+}
+
+    .c-btn1._active span:first-child {
+    display: none;
+  
+    }
+    .c-btn1._active span:last-child {
+     display:block; 
+  
+    }
+    .c-btn1 span:first-child {
+      display:block;  
+
+    }
+    
+    .c-btn1 span:last-child {
+     display: none
+    }
+    .c-btn1{
+        width: 100px;
+        height: 42px;
+        border-radius: 10px;
+        background-color: rgb(112, 164, 231);  
+    }
+    .sp2, .sp1{
+        width: 90px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: rgb(112, 164, 231);  
+    }
+    .c-btn1{
+        margin:10px;
+        padding: 5px;
+        -webkit-box-shadow: -32px 32px 21px -7px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: -32px 32px 21px -7px rgba(34, 60, 80, 0.2);
+        box-shadow: -32px 32px 21px -7px rgba(34, 60, 80, 0.2);
+    }
+    .timer
+    {
+        padding: 20px; 
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        text-align:center;
+        margin-left: 40%;
+        margin-right: auto;
+        font-size: 250%;
+
+    }
+   
+    .strelka{
+
+   display: block;
+   margin: 0 auto;
+    }
+    .tema{
+        margin-right: auto;
+        margin-left: 10px;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: normal;
+        text-shadow: 0px 3px 0px #b2a98f,
+        0px 14px 10px rgba(0,0,0,0.15),
+        0px 24px 2px rgba(0,0,0,0.1),
+        0px 34px 30px rgba(0,0,0,0.1);
+      color: steelblue;
+      transition: all 1s;
+                 text-decoration-color: coral;
+    }
+    h2{
+        font-size: 25px;
+        font-weight: normal;
+        text-shadow: 0px 3px 0px #b2a98f,
+        0px 14px 10px rgba(1,0,10,0.1),
+        0px 24px 2px rgba(0,10,1,0.1),
+        0px 34px 30px rgba(10,1,0,0.1);
+      color: rgb(202, 187, 104);
+      transition: all 1s;
+   
+    }
+    h1:hover {
+        
+        color: transparent;
+        transition: all .5s;
+      }
